@@ -1,0 +1,41 @@
+package Formulario;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Resultado {
+    private boolean erro;
+    private List<String> msgm;
+    private String msg;
+    public Resultado(){
+        this.erro = false;
+        this.msgm = new ArrayList<>();
+    }
+
+    public Resultado(boolean erro) {
+        this.erro = erro;
+        this.msgm = new ArrayList<>();
+    }
+
+    public Resultado(boolean erro, String msg) {
+        this.erro = erro;
+        this.msg = msg;
+        this.msgm = new ArrayList<>();
+    }
+
+    public boolean isErro() {
+        return erro;
+    }
+
+    public void setErro(boolean erro) {
+        this.erro = erro;
+    }
+
+    public void addMensagem(String msg){
+        this.msgm.add(msg);
+    }
+    public List<String> getMensagens(){
+        return this.msgm;
+    }
+
+}
